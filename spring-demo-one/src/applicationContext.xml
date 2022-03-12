@@ -20,6 +20,9 @@
     <bean id="myForzaCoach"
     	class="tech.c3n7.springdemo.ForzaCoach">
     	<property name="fortuneService" ref="myFortuneService"/>
+    	
+    	<property name="emailAddress" value="johndoe@gmail.com"/>
+    	<property name="team" value="Scalpers"/>
     </bean>
 
   
