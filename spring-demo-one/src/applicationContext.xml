@@ -7,13 +7,19 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
   
-  <bean id="myFortune" 
+	<bean id="myFortuneService" 
   		class="tech.c3n7.springdemo.HappyFortuneService">
-  </bean>
-  
-    <bean id="myCoach"
+  	</bean>
+   
+	<bean id="myCoach"
     	class="tech.c3n7.springdemo.TrackCoach">
-    	<constructor-arg ref="myFortune"/>
+    	<constructor-arg ref="myFortuneService"/>
+    </bean>
+
+    
+    <bean id="myForzaCoach"
+    	class="tech.c3n7.springdemo.ForzaCoach">
+    	<property name="fortuneService" ref="myFortuneService"/>
     </bean>
 
   

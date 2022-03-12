@@ -3,7 +3,7 @@ package tech.c3n7.springdemo;
 public class BaseballCoach implements Coach {
 	private FortuneService fortuneService;
 	
-	BaseballCoach(FortuneService theFortuneService) {
+	public BaseballCoach(FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
 	}
 	
