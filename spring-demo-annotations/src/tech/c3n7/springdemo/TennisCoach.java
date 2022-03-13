@@ -2,7 +2,7 @@ package tech.c3n7.springdemo;
 
 import org.springframework.stereotype.Component;
 
-@Component("thatSillyCoach")
+@Component
 public class TennisCoach implements Coach{
     @Override
     public String getDailyWorkout() {
