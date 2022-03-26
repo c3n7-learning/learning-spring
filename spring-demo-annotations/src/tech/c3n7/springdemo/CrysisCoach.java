@@ -8,4 +8,9 @@ public class CrysisCoach implements Coach{
     public String getDailyWorkout() {
         return "Buy another GPU";
     }
+
+    @Override
+    public String getDailyFortune() {
+        return null;
+    }
 }
