@@ -5,11 +5,21 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TennisCoach implements Coach{
-    private final FortuneService fortuneService;
+public class TennisCoach implements Coach {
+    private FortuneService fortuneService;
+
+//    @Autowired
+//    public TennisCoach(@Qualifier("cutThroatFortuneService") FortuneService theFortuneService) {
+//        fortuneService = theFortuneService;
+//    }
+
+    public TennisCoach() {
+        System.out.println(">> Inside default constructor");
+    }
 
     @Autowired
-    public TennisCoach(@Qualifier("cutThroatFortuneService") FortuneService theFortuneService) {
+    public void setFortuneService(@Qualifier("happyFortuneService")FortuneService theFortuneService) {
+        System.out.println(">> Inside setter method");
         fortuneService = theFortuneService;
     }
 
