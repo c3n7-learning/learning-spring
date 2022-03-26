@@ -17,8 +17,14 @@ public class TennisCoach implements Coach {
         System.out.println(">> Inside default constructor");
     }
 
+//    @Autowired
+//    public void setFortuneService(@Qualifier("happyFortuneService")FortuneService theFortuneService) {
+//        System.out.println(">> Inside setter method");
+//        fortuneService = theFortuneService;
+//    }
+
     @Autowired
-    public void setFortuneService(@Qualifier("happyFortuneService")FortuneService theFortuneService) {
+    public void aCrazyMethod(@Qualifier("cutThroatFortuneService")FortuneService theFortuneService) {
         System.out.println(">> Inside setter method");
         fortuneService = theFortuneService;
     }
