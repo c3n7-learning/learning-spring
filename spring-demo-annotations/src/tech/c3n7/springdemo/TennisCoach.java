@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
+    @Autowired
+    @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
 
 //    @Autowired
@@ -23,11 +25,11 @@ public class TennisCoach implements Coach {
 //        fortuneService = theFortuneService;
 //    }
 
-    @Autowired
-    public void aCrazyMethod(@Qualifier("cutThroatFortuneService")FortuneService theFortuneService) {
-        System.out.println(">> Inside setter method");
-        fortuneService = theFortuneService;
-    }
+//    @Autowired
+//    public void aCrazyMethod(@Qualifier("cutThroatFortuneService")FortuneService theFortuneService) {
+//        System.out.println(">> Inside setter method");
+//        fortuneService = theFortuneService;
+//    }
 
     @Override
     public String getDailyWorkout() {
