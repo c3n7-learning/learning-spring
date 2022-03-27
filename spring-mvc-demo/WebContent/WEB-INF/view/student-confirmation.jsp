@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -44,6 +46,12 @@
       <p class="mt-2">${student.firstName} ${student.lastName}</p>
       <p class="mt-2">Country ${student.country}</p>
       <p class="mt-2">Favorite Language ${student.favoriteLanguage}</p>
+      <p class="mt-4">Operating Systems</p>
+      <ul>
+        <c:forEach var="temp" items="${student.operatingSystems}">
+          <li>${temp}</li>
+        </c:forEach>
+      </ul>
     </div>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>

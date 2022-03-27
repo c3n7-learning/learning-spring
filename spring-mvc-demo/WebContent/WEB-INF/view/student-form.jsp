@@ -60,6 +60,14 @@
           <form:radiobuttons path="favoriteLanguage" class="form-check-input" items="${student.favoriteLanguageOptions}"/>
         </div>
 
+        <div class="mt-2">Operating Systems</div>
+        <div>
+            Linux <form:checkbox path="operatingSystems" value="Linux"/>
+            Windows <form:checkbox path="operatingSystems" value="Windows"/>
+            Mac OS <form:checkbox path="operatingSystems" value="Mac OS"/>
+        </div>
+
+
         <input type="submit" value="Submit" class="btn btn-primary mt-2">
       </form:form>
 
