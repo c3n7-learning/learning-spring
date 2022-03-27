@@ -62,6 +62,12 @@
           <form:errors path="freePasses" cssClass="fs-6 text-danger" />
         </div>
 
+        <div class="mt-2">Postal Code</div>
+        <form:input path="postalCode" cssClass="form-control" />
+        <div>
+          <form:errors path="postalCode" cssClass="fs-6 text-danger" />
+        </div>
+
         <input type="submit" value="Submit" class="btn btn-primary mt-2" />
       </form:form>
     </div>
