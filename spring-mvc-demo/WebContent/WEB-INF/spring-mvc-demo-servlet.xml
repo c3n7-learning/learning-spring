@@ -14,6 +14,8 @@
 	<!-- Step 3: Add support for component scanning -->
 	<context:component-scan base-package="tech.c3n7.springdemo" />
 
+	<mvc:resources mapping="/resources/**" location="/resources/"/>
+
 	<!-- Step 4: Add support for conversion, formatting and validation support -->
 	<mvc:annotation-driven/>
 
