@@ -5,8 +5,9 @@
       href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"
       rel="stylesheet"
     />
-  </head>
 
+    <title>Student Confirmation</title>
+  </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -32,19 +33,17 @@
                 >Hello Form</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/spring-mvc-demo/student/showForm">
-                Student Form
-              </a>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <div class="container mt-5">
-      <h2>Spring MVC Demo - Home Page</h2>
-      <hr />
+      <h2>Student Confirmed</h2>
+
+      <br /><br />
+
+      ${student.firstName} ${student.lastName}
     </div>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>

@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,8 +7,9 @@
       href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"
       rel="stylesheet"
     />
-  </head>
 
+    <title>Input Form</title>
+  </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -32,19 +35,24 @@
                 >Hello Form</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/spring-mvc-demo/student/showForm">
-                Student Form
-              </a>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container mt-5">
-      <h2>Spring MVC Demo - Home Page</h2>
-      <hr />
+    <div class="container-sm mt-5">
+      <h2>Student Registration Form</h2>
+
+      <form:form action="processForm" modelAttribute="student" cssClass="w-25" >
+        <div class="mt-2">First Name</div>        
+        <form:input path="firstName" cssClass="form-control" />
+
+        <div class="mt-2">Last Name</div>        
+        <form:input path="lastName" cssClass="form-control" />
+
+        <input type="submit" value="Submit" class="btn btn-primary mt-2">
+      </form:form>
+
     </div>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
