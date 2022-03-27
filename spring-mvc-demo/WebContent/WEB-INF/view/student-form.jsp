@@ -52,7 +52,7 @@
 
         <div class="mt-2">Country</div>        
         <form:select path="country" cssClass="form-select">
-          <form:options items="${student.countryOptions}"/>
+          <form:options items="${theCountryOptions}"/>
         </form:select>
 
         <input type="submit" value="Submit" class="btn btn-primary mt-2">
