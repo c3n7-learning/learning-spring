@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 
     @RequestMapping("/showForm")

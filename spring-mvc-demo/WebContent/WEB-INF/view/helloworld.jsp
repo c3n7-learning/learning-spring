@@ -29,7 +29,7 @@
               <a class="nav-link" href="/spring-mvc-demo">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/spring-mvc-demo/showForm"
+              <a class="nav-link" href="/spring-mvc-demo/hello/showForm"
                 >Hello Form</a
               >
             </li>

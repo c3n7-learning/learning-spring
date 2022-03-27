@@ -38,7 +38,7 @@
     </nav>
 
     <div class="container mt-5">
-      <h2>Spring MVC Demo - Home Page</h2>
+      <h2>A Silly Page</h2>
       <hr />
     </div>
 
