@@ -41,9 +41,8 @@
     <div class="container mt-5">
       <h2>Student Confirmed</h2>
 
-      <br /><br />
-
-      ${student.firstName} ${student.lastName}
+      <p class="mt-2">${student.firstName} ${student.lastName}</p>
+      <p class="mt-2">Country ${student.country}</p>
     </div>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>

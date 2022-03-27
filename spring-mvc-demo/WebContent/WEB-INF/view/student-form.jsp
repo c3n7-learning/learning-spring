@@ -50,6 +50,15 @@
         <div class="mt-2">Last Name</div>        
         <form:input path="lastName" cssClass="form-control" />
 
+        <div class="mt-2">Country</div>        
+        <form:select path="country" cssClass="form-select">
+          <form:option value="brazil">Brazil</form:option>
+          <form:option value="kenya">Kenya</form:option>
+          <form:option value="tanzania">Tanzania</form:option>
+          <form:option value="uganda">Uganda</form:option>
+          <form:option value="ethiopia">Ethiopia</form:option>
+        </form:select>
+
         <input type="submit" value="Submit" class="btn btn-primary mt-2">
       </form:form>
 
