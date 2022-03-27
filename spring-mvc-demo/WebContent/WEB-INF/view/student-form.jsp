@@ -52,11 +52,7 @@
 
         <div class="mt-2">Country</div>        
         <form:select path="country" cssClass="form-select">
-          <form:option value="brazil">Brazil</form:option>
-          <form:option value="kenya">Kenya</form:option>
-          <form:option value="tanzania">Tanzania</form:option>
-          <form:option value="uganda">Uganda</form:option>
-          <form:option value="ethiopia">Ethiopia</form:option>
+          <form:options items="${student.countryOptions}"/>
         </form:select>
 
         <input type="submit" value="Submit" class="btn btn-primary mt-2">
