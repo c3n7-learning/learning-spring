@@ -55,6 +55,11 @@
           <form:options items="${theCountryOptions}"/>
         </form:select>
 
+        <div class="mt-2">Favorite Language</div>
+        <div>
+          <form:radiobuttons path="favoriteLanguage" class="form-check-input" items="${student.favoriteLanguageOptions}"/>
+        </div>
+
         <input type="submit" value="Submit" class="btn btn-primary mt-2">
       </form:form>
 

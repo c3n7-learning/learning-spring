@@ -43,6 +43,7 @@
 
       <p class="mt-2">${student.firstName} ${student.lastName}</p>
       <p class="mt-2">Country ${student.country}</p>
+      <p class="mt-2">Favorite Language ${student.favoriteLanguage}</p>
     </div>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
