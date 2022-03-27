@@ -68,6 +68,12 @@
           <form:errors path="postalCode" cssClass="fs-6 text-danger" />
         </div>
 
+        <div class="mt-2">Course Code</div>
+        <form:input path="courseCode" cssClass="form-control" />
+        <div>
+          <form:errors path="courseCode" cssClass="fs-6 text-danger" />
+        </div>
+
         <input type="submit" value="Submit" class="btn btn-primary mt-2" />
       </form:form>
     </div>

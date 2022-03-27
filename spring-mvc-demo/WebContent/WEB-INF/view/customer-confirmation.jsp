@@ -48,6 +48,8 @@
       <p class="mt-2">Free Passes: ${customer.freePasses}</p>
 
       <p class="mt-2">Postal Code: ${customer.postalCode}</p>
+
+      <p class="mt-2">Course Code: ${customer.courseCode}</p>
     </div>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
