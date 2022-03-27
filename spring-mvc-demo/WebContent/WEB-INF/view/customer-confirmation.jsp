@@ -44,6 +44,8 @@
       <h2>Customer Confirmed</h2>
 
       <p class="mt-2">${customer.firstName} ${customer.lastName}</p>
+
+      <p class="mt-2">Free Passes: ${customer.freePasses}</p>
     </div>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>

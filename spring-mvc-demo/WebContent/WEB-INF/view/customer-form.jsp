@@ -56,6 +56,12 @@
           <form:errors path="lastName" cssClass="fs-6 text-danger" />
         </div>
 
+        <div class="mt-2">Free Passes</div>
+        <form:input path="freePasses" cssClass="form-control" />
+        <div>
+          <form:errors path="freePasses" cssClass="fs-6 text-danger" />
+        </div>
+
         <input type="submit" value="Submit" class="btn btn-primary mt-2" />
       </form:form>
     </div>
