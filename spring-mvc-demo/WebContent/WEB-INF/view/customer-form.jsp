@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,8 +7,9 @@
       href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"
       rel="stylesheet"
     />
-  </head>
 
+    <title>Input Form</title>
+  </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -32,24 +35,29 @@
                 >Hello Form</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/spring-mvc-demo/student/showForm">
-                Student Form
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/spring-mvc-demo/customer/showForm">
-                Customer Form
-              </a>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container mt-5">
-      <h2>Spring MVC Demo - Home Page</h2>
-      <hr />
+    <div class="container-sm mt-5">
+      <h2>Customer Registration Form</h2>
+
+      <form:form action="processForm" modelAttribute="customer">
+        <div class="mt-2">First Name</div>
+        <form:input path="firstName" cssClass="form-control" />
+        <div>
+          <form:errors path="firstName" cssClass="fs-6 text-danger" />
+        </div>
+
+        <div class="mt-2">Last Name*</div>
+        <form:input path="lastName" cssClass="form-control" />
+        <div>
+          <form:errors path="lastName" cssClass="fs-6 text-danger" />
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-primary mt-2" />
+      </form:form>
     </div>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>

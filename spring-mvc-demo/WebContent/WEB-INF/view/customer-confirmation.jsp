@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,8 +7,9 @@
       href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"
       rel="stylesheet"
     />
-  </head>
 
+    <title>Customer Confirmation</title>
+  </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -32,24 +35,15 @@
                 >Hello Form</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/spring-mvc-demo/student/showForm">
-                Student Form
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/spring-mvc-demo/customer/showForm">
-                Customer Form
-              </a>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <div class="container mt-5">
-      <h2>Spring MVC Demo - Home Page</h2>
-      <hr />
+      <h2>Customer Confirmed</h2>
+
+      <p class="mt-2">${customer.firstName} ${customer.lastName}</p>
     </div>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
