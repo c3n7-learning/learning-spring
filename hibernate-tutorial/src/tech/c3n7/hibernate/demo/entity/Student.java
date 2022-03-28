@@ -34,4 +34,8 @@ public class Student {
     public String toString() {
         return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
     }
+
+    public int getId() {
+        return id;
+    }
 }
