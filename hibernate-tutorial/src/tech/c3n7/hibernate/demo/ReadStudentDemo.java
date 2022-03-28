@@ -16,25 +16,27 @@ public class ReadStudentDemo {
         Session session = factory.getCurrentSession();
 
         try {
-            System.out.println("Create a new student object");
-            Student tempStudent = new Student("Wood", "Person", "woodperson@furniture.com");
-
-            session.beginTransaction();
-
-            System.out.println("Saving the student");
-            System.out.println(tempStudent);
-            session.save(tempStudent);
-
-            session.getTransaction().commit();
-            System.out.println("Saved Student. Generated id: " + tempStudent.getId());
-            System.out.println("Done.");
+//            System.out.println("Create a new student object");
+//            Student tempStudent = new Student("Wood", "Person", "woodperson@furniture.com");
+//
+//            session.beginTransaction();
+//
+//            System.out.println("Saving the student");
+//            System.out.println(tempStudent);
+//            session.save(tempStudent);
+//
+//            session.getTransaction().commit();
+//            System.out.println("Saved Student. Generated id: " + tempStudent.getId());
+//            System.out.println("Done.");
 
 
             session = factory.getCurrentSession();
             session.beginTransaction();
 
-            System.out.println("\nGetting the student with id: "+ tempStudent.getId());
-            Student myStudent = session.get(Student.class, tempStudent.getId());
+//            System.out.println("\nGetting the student with id: "+ tempStudent.getId());
+//            Student myStudent = session.get(Student.class, tempStudent.getId());
+            System.out.println("\nGetting the student with id: "+ 2);
+            Student myStudent = session.get(Student.class, 2);
 
             System.out.println("Get complete: " + myStudent);
 
