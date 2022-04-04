@@ -108,7 +108,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="servlet-api" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -167,6 +166,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/jboss-logging-3.4.1.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///usr/share/java/tomcat10/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
