@@ -20,10 +20,16 @@ public class CreateDemo {
 
         try {
             // create the objects
+//            Instructor tempInstructor =
+//                    new Instructor("Chad", "Darby", "chard@luv2code.com");
+//            InstructorDetail tempInstructorDetail = new InstructorDetail(
+//                    "http://www.luv2code.com", "Luv 2 Code"
+//            );
+
             Instructor tempInstructor =
-                    new Instructor("Chad", "Darby", "chard@luv2code.com");
+                    new Instructor("Jane", "Johnson", "janejohnson@teachable.com");
             InstructorDetail tempInstructorDetail = new InstructorDetail(
-                    "http://www.luv2code.com", "Luv 2 Code"
+                    "http://www.johnson.com", "Jane A Johnson"
             );
 
             // associate the objects
