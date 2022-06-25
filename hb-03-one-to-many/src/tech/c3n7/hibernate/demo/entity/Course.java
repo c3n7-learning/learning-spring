@@ -1,21 +1,20 @@
 package tech.c3n7.hibernate.demo.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="course")
 public class Course {
-    // define our fields
-    // define constructors
-    // define getters setters
-    // define to string
-    // anotate fields
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
 
+    @Column(name="title")
     private String title;
 
+    @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinColumn(name="instructor_id")
     private Instructor instructor;
 
     public Course() {
