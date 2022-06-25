@@ -20,21 +20,22 @@ public class CreateCoursesDemo {
         Session session = factory.getCurrentSession();
 
         try {
-            Instructor tempInstructor =
-                    new Instructor("Gunnar", "Gunnarson", "gunnar.gunnarson@gunnars.com");
-            InstructorDetail tempInstructorDetail = new InstructorDetail(
-                    "http://www.gunnars.com", "Shooting Stuff"
-            );
-
-            // associate the objects
-            tempInstructor.setInstructorDetail(tempInstructorDetail);
-
             //start a transaction
             session.beginTransaction();
 
-            // save the instructor (this will ALSO save the details object because of CascadeType.ALL)
-            System.out.println("Saving instructor: " + tempInstructor);
-            session.save(tempInstructor);
+            // get the instructor from the db
+            int theId = 1;
+            Instructor tempInstructor = session.get(Instructor.class, theId);
+
+            Course tempCourse1 = new Course("Air Guitar - Ultimate Guide");
+            Course tempCourse2 = new Course("Writing - A to Z");
+
+            tempInstructor.add(tempCourse1);
+            tempInstructor.add(tempCourse2);
+
+            // save courses
+            session.save(tempCourse1);
+            session.save(tempCourse2);
 
             // commit the transaction
             session.getTransaction().commit();
