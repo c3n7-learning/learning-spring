@@ -44,35 +44,7 @@
     </nav>
 
     <section class="container mt-5">
-      <div class="card">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-            <h5 class="card-title">Customers</h5>
-            <a href="showFormForAdd" class="btn btn-primary mb-3">
-              Add Customer
-            </a>
-          </div>
-
-          <table class="table table-striped rounded">
-            <thead class="">
-              <tr class="bg-dark text-white">
-                <th scope="col" class="rounded">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <c:forEach var="tempCustomer" items="${customer}">
-                <tr>
-                  <td>${tempCustomer.firstName}</td>
-                  <td>${tempCustomer.lastName}</td>
-                  <td>${tempCustomer.email}</td>
-                </tr>
-              </c:forEach>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <h3>Add Customer</h3>
     </section>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
