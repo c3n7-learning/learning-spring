@@ -46,6 +46,9 @@
       <h4 class="mb-4">Add Customer</h4>
 
       <form:form action="saveCustomer" modelAttribute="customer" method="POST">
+        <!-- need to associate this data with customer id -->
+        <form:hidden path="id" />
+
         <div class="form-group">
           <label>First Name</label>
           <form:input
