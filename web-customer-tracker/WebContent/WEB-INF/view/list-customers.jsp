@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,6 +9,31 @@
     <title>List Customers</title>
   </head>
   <body>
-    List Customers - coming soon haha.
+    <section>
+      <header>
+        <h2>CRM - Customer Relationship Manager</h2>
+      </header>
+
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <c:forEach var="tempCustomer" items="${customer}">
+              <tr>
+                <td>${tempCustomer.firstName}</td>
+                <td>${tempCustomer.lastName}</td>
+                <td>${tempCustomer.email}</td>
+              </tr>
+            </c:forEach>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </body>
 </html>

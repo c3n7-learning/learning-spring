@@ -4,11 +4,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import tech.c3n7.springdemo.entity.Customer;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
+@Repository
 public class CustomerClassImpl implements CustomerDAO {
 
     // Need to inject the hibernate session factory
