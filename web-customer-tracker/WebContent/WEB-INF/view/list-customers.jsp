@@ -59,9 +59,14 @@
         </thead>
         <tbody>
           <c:forEach var="tempCustomer" items="${customer}">
+            <!--Construct an update link with customer id -->
             <c:url var="updateLink" value="/customer/showFormForUpdate">
               <c:param name="customerId" value="${tempCustomer.id}" />
-              Update
+            </c:url>
+
+            <!--Construct a delete link with customer id -->
+            <c:url var="deleteLink" value="/customer/delete">
+              <c:param name="customerId" value="${tempCustomer.id}" />
             </c:url>
 
             <tr>
@@ -70,6 +75,13 @@
               <td>${tempCustomer.email}</td>
               <td>
                 <a href="${updateLink}" class="btn btn-sm btn-dark"> Update </a>
+                <a
+                  href="${deleteLink}"
+                  class="btn btn-sm btn-danger ml-2"
+                  onclick="if(!confirm('Delete? This operation is irreversible.')) return false;"
+                >
+                  Delete
+                </a>
               </td>
             </tr>
           </c:forEach>
