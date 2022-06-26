@@ -10,7 +10,7 @@ import tech.c3n7.springdemo.entity.Customer;
 import java.util.List;
 
 @Repository
-public class CustomerClassImpl implements CustomerDAO {
+public class CustomerDAOImpl implements CustomerDAO {
 
     // Need to inject the hibernate session factory
     @Autowired
@@ -29,5 +29,14 @@ public class CustomerClassImpl implements CustomerDAO {
 
         // return the list of retrieved customers
         return customers;
+    }
+
+    @Override
+    public void saveCustomer(Customer theCustomer) {
+        // get the current session
+        Session currentSession = sessionFactory.getCurrentSession();
+
+        // save the customer
+        currentSession.save(theCustomer);
     }
 }
