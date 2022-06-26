@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import tech.c3n7.hibernate.demo.entity.*;
 
-public class GetCoursesForJaneDemo {
+public class DeletePacmanCourseDemo {
     public static void main(String[] args) {
 
         SessionFactory factory = new Configuration()
@@ -23,12 +23,13 @@ public class GetCoursesForJaneDemo {
             //start a transaction
             session.beginTransaction();
 
-            // get the student jane from the db
-            int studentId = 1;
-            Student theStudent = session.get(Student.class, studentId);
+            // get the pacman course
+            int courseId = 10;
+            Course tempCourse = session.get(Course.class, courseId);
 
-            System.out.println("\nLoaded student: " + theStudent);
-            System.out.println("Current course(s): " + theStudent.getCourses());
+            // delete the pacman course
+            System.out.println("Deleting Course: " + tempCourse);
+            session.delete(tempCourse);
 
             // commit the transaction
             session.getTransaction().commit();
