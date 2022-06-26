@@ -14,7 +14,7 @@
     <title>List Customers</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">CRM - Customer Relationship Manager</a>
         <button
@@ -29,50 +29,43 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="/spring-mvc-demo">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/spring-mvc-demo/hello/showForm"
-                >Hello Form</a
+              <a
+                class="nav-link"
+                href="${pageContext.request.contextPath}/customer/list"
+                >Home</a
               >
             </li>
-          </ul> -->
+          </ul>
         </div>
       </div>
     </nav>
 
     <section class="container mt-5">
-      <div class="card">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-            <h5 class="card-title">Customers</h5>
-            <a href="showFormForAdd" class="btn btn-primary mb-3">
-              Add Customer
-            </a>
-          </div>
-
-          <table class="table table-striped rounded">
-            <thead class="">
-              <tr class="bg-dark text-white">
-                <th scope="col" class="rounded">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <c:forEach var="tempCustomer" items="${customer}">
-                <tr>
-                  <td>${tempCustomer.firstName}</td>
-                  <td>${tempCustomer.lastName}</td>
-                  <td>${tempCustomer.email}</td>
-                </tr>
-              </c:forEach>
-            </tbody>
-          </table>
-        </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <h4>Customers</h4>
+        <a href="showFormForAdd" class="btn btn-success mb-3"> Add Customer </a>
       </div>
+
+      <table class="table table-striped rounded">
+        <thead class="">
+          <tr class="bg-success text-white">
+            <th scope="col" class="rounded">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <c:forEach var="tempCustomer" items="${customer}">
+            <tr>
+              <td>${tempCustomer.firstName}</td>
+              <td>${tempCustomer.lastName}</td>
+              <td>${tempCustomer.email}</td>
+            </tr>
+          </c:forEach>
+        </tbody>
+      </table>
     </section>
 
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
