@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import tech.c3n7.springdemo.entity.Customer;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
@@ -18,7 +17,6 @@ public class CustomerClassImpl implements CustomerDAO {
     private SessionFactory sessionFactory;
 
     @Override
-    @Transactional
     public List<Customer> getCustomers() {
         // get the current hibernate session
         Session currentSession = sessionFactory.getCurrentSession();
