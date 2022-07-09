@@ -14,7 +14,13 @@ public class AfterThrowingDemoApp {
         // get the bean from the spring container
         AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
 
-        List<Account> theAccounts = theAccountDAO.findAccounts();
+        List<Account> theAccounts = null;
+        try {
+            boolean tripWire = true;
+            theAccounts = theAccountDAO.findAccounts(tripWire);
+        } catch (Exception exc) {
+            System.out.println("\n\nMainProgram: ...caught exception: " + exc);
+        }
 
         System.out.println("\n\nMainProgram: AfterReturningDemoApp");
         System.out.println("-----");

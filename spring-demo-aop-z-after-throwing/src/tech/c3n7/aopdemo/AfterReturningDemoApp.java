@@ -2,7 +2,6 @@ package tech.c3n7.aopdemo;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import tech.c3n7.aopdemo.dao.AccountDAO;
-import tech.c3n7.aopdemo.dao.MembershipDAO;
 
 import java.util.List;
 
@@ -15,7 +14,8 @@ public class AfterReturningDemoApp {
         // get the bean from the spring container
         AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
 
-        List<Account> theAccounts = theAccountDAO.findAccounts();
+        boolean tripWire = true;
+        List<Account> theAccounts = theAccountDAO.findAccounts(tripWire);
 
         System.out.println("\n\nMainProgram: AfterReturningDemoApp");
         System.out.println("-----");
