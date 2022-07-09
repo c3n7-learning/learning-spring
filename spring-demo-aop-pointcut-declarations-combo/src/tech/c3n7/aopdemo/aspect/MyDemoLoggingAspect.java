@@ -19,12 +19,15 @@ public class MyDemoLoggingAspect {
     @Pointcut("execution(* tech.c3n7.aopdemo.dao.*.set*(..))")
     private void setters() {}
 
-    @Before("forDaoPackage()")
+    @Pointcut("forDaoPackage() && !(setters() || getters())")
+    private void forDaoPackageNoGetterSetter() {}
+
+    @Before("forDaoPackageNoGetterSetter()")
     public void beforeAddAccountAdvice() {
         System.out.println("\n==========>>> Executing @Before advice on method()");
     }
 
-    @Before("forDaoPackage()")
+    @Before("forDaoPackageNoGetterSetter()")
     public void performApiAnalytics() {
         System.out.println("\n==========>>> Performing API Analytics");
     }
