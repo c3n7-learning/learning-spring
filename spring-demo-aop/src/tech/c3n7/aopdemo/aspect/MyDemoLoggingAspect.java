@@ -10,10 +10,8 @@ public class MyDemoLoggingAspect {
 
     // this is where we add all of our related advices for logging
 
-    // start with a @Before advice
-//    @Before("execution(public void addAccount())")
-//    @Before("execution(public void tech.c3n7.aopdemo.dao.AccountDAO.addAccount())")
-    @Before("execution(* add*(..))")
+
+    @Before("execution(* tech.c3n7.aopdemo.dao.*.*(..))")
     public void beforeAddAccountAdvice() {
         System.out.println("\n==========>>> Executing @Before advice on method()");
     }

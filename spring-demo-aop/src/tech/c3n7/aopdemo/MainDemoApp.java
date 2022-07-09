@@ -20,6 +20,9 @@ public class MainDemoApp {
         theMembershipDAO.addAccount();
         theMembershipDAO.addSillyMember();
 
+        theAccountDAO.doWork();
+        theMembershipDAO.goToSleep();
+
         // close the context
         context.close();
     }
