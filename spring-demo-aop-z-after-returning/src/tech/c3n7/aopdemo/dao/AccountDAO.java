@@ -3,11 +3,28 @@ package tech.c3n7.aopdemo.dao;
 import org.springframework.stereotype.Component;
 import tech.c3n7.aopdemo.Account;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class AccountDAO {
 
     private String name;
     private String serviceCode;
+
+    public List<Account> findAccounts() {
+        List<Account> myAccounts = new ArrayList<>();
+
+        Account temp1 = new Account("John", "Silver");
+        Account temp2 = new Account("Ann", "Gold");
+        Account temp3 = new Account("Madhu", "Platinum");
+
+        myAccounts.add(temp1);
+        myAccounts.add(temp2);
+        myAccounts.add(temp3);
+
+        return myAccounts;
+    }
 
     public String getName() {
         System.out.println(getClass() + ": in getName");
