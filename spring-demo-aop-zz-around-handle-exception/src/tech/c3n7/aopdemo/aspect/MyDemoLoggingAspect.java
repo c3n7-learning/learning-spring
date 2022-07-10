@@ -24,7 +24,15 @@ public class MyDemoLoggingAspect {
         myLogger.info("\n==========>>> Executing @Around on " + method);
 
         long begin = System.currentTimeMillis();
-        Object result = theProceedingJoinPoint.proceed();
+
+        Object result = null;
+        try {
+            result = theProceedingJoinPoint.proceed();
+        } catch (Exception e) {
+            myLogger.warning(e.getMessage());
+
+            return "Major accident! But no worries, you are a VIP, a backup Helicopter is coming";
+        }
 
         // get end timestamp
         long end = System.currentTimeMillis();
