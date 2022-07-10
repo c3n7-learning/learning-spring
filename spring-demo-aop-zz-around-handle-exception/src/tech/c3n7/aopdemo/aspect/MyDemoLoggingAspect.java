@@ -31,7 +31,7 @@ public class MyDemoLoggingAspect {
         } catch (Exception e) {
             myLogger.warning(e.getMessage());
 
-            return "Major accident! But no worries, you are a VIP, a backup Helicopter is coming";
+            throw e;
         }
 
         // get end timestamp
