@@ -114,7 +114,7 @@
                     <configuration>
                         <url>http://localhost:8080/manager/text</url>
                         <server>Tomcat9</server>
-                        <path>/spring-security-demo-08-jdbc-plaintext-form</path>
+                        <path>/spring-security-demo-08-jdbc-plaintext-t9</path>
                     </configuration>
                 </plugin>
 

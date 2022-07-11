@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8704cea8-30cd-44cf-a24d-0d60b8816c6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/persistence-mysql.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/c3n7/tech/springsecurity/demo/jdbc/TestJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mycoolapp/target/classes/tech/c3n7/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mycoolapp/target/classes/tech/c3n7/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security-demo-01-base-app/target/classes/c3n7/tech/springsecurity/demo/config/DemoAppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security-demo-01-base-app/target/classes/c3n7/tech/springsecurity/demo/config/DemoAppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security-demo-01-base-app/target/classes/c3n7/tech/springsecurity/demo/config/MySpringMvcDispatcherServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security-demo-01-base-app/target/classes/c3n7/tech/springsecurity/demo/config/MySpringMvcDispatcherServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security-demo-01-base-app/target/classes/c3n7/tech/springsecurity/demo/controller/DemoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security-demo-01-base-app/target/classes/c3n7/tech/springsecurity/demo/controller/DemoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/c3n7/tech/springsecurity/demo/config/DemoAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c3n7/tech/springsecurity/demo/config/DemoAppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/c3n7/tech/springsecurity/demo/config/DemoSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c3n7/tech/springsecurity/demo/config/DemoSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/persistence-mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistence-mysql.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,24 +40,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/timo/Documents/Serious_Learning_Docs/Java/learning-spring/spring-security-demo-08-jdbc-plaintext",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatSettingConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/timo/Documents/Serious_Learning_Docs/Java/learning-spring/spring-security-demo-08-jdbc-plaintext&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn compile" />
       <command value="mvn package" />
+      <command value="mvn clean:clean" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TestJDBC">
+    <configuration name="TestJDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="c3n7.tech.springsecurity.demo.jdbc.TestJDBC" />
+      <module name="spring-security-demo-08-jdbc-plaintext" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="c3n7.tech.springsecurity.demo.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="spring-security-demo-01-base-app" />
       <method v="2">
@@ -62,11 +85,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Maven Tomcat" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat9:redeploy" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="Tomcat 9" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
       <option name="adminPort" value="8005" />
       <option name="contextPath" value="/spring-security-demo" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="passParentEnvironmentVariables" value="true" />
       <option name="port" value="8080" />
       <option name="tomcatInfo">
@@ -102,6 +152,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.TestJDBC" />
+      <item itemvalue="Maven.Maven Tomcat" />
+      <item itemvalue="Smart Tomcat.Tomcat 9" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestJDBC" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
