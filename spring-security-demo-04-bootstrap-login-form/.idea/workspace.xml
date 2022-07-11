@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8704cea8-30cd-44cf-a24d-0d60b8816c6c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../spring-security-demo-03-custom-login-form/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security-demo-03-custom-login-form/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/c3n7/tech/springsecurity/demo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/c3n7/tech/springsecurity/demo/controller/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +79,26 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
+      <option name="adminPort" value="8005" />
+      <option name="contextPath" value="/spring-security-demo-04-bootstrap-login-form" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions" />
+      <option name="passParentEnvironmentVariables" value="true" />
+      <option name="port" value="8080" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.0.16" />
+          <option name="number" value="0" />
+          <option name="path" value="/usr/share/tomcat10" />
+          <option name="version" value="10.0.16.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
