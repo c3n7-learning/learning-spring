@@ -16,16 +16,20 @@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
     <p>c3n7 doesn't play games. We are serious.</p>
 
     <hr />
-    <p>
-      <a href="${pageContext.request.contextPath}/leaders">
-        LeaderShip Meeting
-      </a>
-      (Only for Manager peeps)
-    </p>
-    <p>
-      <a href="${pageContext.request.contextPath}/systems"> Systems </a>
-      (Only for Admin peeps)
-    </p>
+    <security:authorize access="hasRole('MANAGER')">
+      <p>
+        <a href="${pageContext.request.contextPath}/leaders">
+          LeaderShip Meeting
+        </a>
+        (Only for Manager peeps)
+      </p>
+    </security:authorize>
+    <security:authorize access="hasRole('ADMIN')">
+      <p>
+        <a href="${pageContext.request.contextPath}/systems"> Systems </a>
+        (Only for Admin peeps)
+      </p>
+    </security:authorize>
 
     <hr />
     User: <security:authentication property="principal.username" />
