@@ -36,7 +36,13 @@
         >
           <c:if test="${param.error != null}">
             <div class="alert alert-warning mb-2" role="alert">
-              Invalid username or password
+              Invalid username or password.
+            </div>
+          </c:if>
+
+          <c:if test="${param.logout != null}">
+            <div class="alert alert-success mb-2" role="alert">
+              You have been logged out.
             </div>
           </c:if>
 

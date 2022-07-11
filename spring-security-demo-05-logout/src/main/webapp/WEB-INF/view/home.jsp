@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,5 +13,10 @@
     <hr />
 
     c3n7 doesn't play games. We are serious.
+
+    <br />
+    <form:form action="${pageContext.request.contextPath}/logout" method="POST">
+      <input type="submit" value="Logout" />
+    </form:form>
   </body>
 </html>
