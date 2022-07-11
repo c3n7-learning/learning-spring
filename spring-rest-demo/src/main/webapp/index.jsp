@@ -7,7 +7,8 @@
     <title>Spring Rest Demo</title>
   </head>
   <body>
-    Spring REST Demo
+    <h2>Spring REST Demo</h2>
     <hr />
+    <a href="${pageContext.request.contextPath}/test/hello">Hello</a>
   </body>
 </html>
