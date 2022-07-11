@@ -1,5 +1,5 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> <%@
+taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +13,18 @@
     <h2>Tight security</h2>
     <hr />
 
+    <p>c3n7 doesn't play games. We are serious.</p>
+
+    <hr />
     <p>
-    c3n7 doesn't play games. We are serious.
+      <a href="${pageContext.request.contextPath}/leaders">
+        LeaderShip Meeting
+      </a>
+      (Only for Manager peeps)
+    </p>
+    <p>
+      <a href="${pageContext.request.contextPath}/systems"> Systems </a>
+      (Only for Admin peeps)
     </p>
 
     <hr />
@@ -25,6 +35,7 @@
 
     <br />
     <br />
+    <hr />
     <form:form action="${pageContext.request.contextPath}/logout" method="POST">
       <input type="submit" value="Logout" />
     </form:form>
