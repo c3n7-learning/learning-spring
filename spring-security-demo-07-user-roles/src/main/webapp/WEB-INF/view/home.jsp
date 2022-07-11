@@ -16,6 +16,14 @@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
     <p>c3n7 doesn't play games. We are serious.</p>
 
     <hr />
+    <br />
+    User: <security:authentication property="principal.username" />
+    <br />
+    <br />
+    Roles(s): <security:authentication property="principal.authorities" />
+
+    <br />
+
     <security:authorize access="hasRole('MANAGER')">
       <p>
         <a href="${pageContext.request.contextPath}/leaders">
@@ -26,19 +34,13 @@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
     </security:authorize>
     <security:authorize access="hasRole('ADMIN')">
       <p>
-        <a href="${pageContext.request.contextPath}/systems"> Systems </a>
+        <a href="${pageContext.request.contextPath}/systems">
+          IT Systems Meeting
+        </a>
         (Only for Admin peeps)
       </p>
     </security:authorize>
 
-    <hr />
-    User: <security:authentication property="principal.username" />
-    <br />
-    <br />
-    Roles(s): <security:authentication property="principal.authorities" />
-
-    <br />
-    <br />
     <hr />
     <form:form action="${pageContext.request.contextPath}/logout" method="POST">
       <input type="submit" value="Logout" />
