@@ -95,7 +95,7 @@
                     <configuration>
                         <url>http://localhost:8080/manager/text</url>
                         <server>Tomcat9</server>
-                        <path>/spring-security-custom-login</path>
+                        <path>/spring-security-demo-03-custom-login-form</path>
                     </configuration>
                 </plugin>
 
