@@ -1,10 +1,7 @@
 package tech.c3n7.springdemo.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import tech.c3n7.springdemo.entity.Customer;
 import tech.c3n7.springdemo.service.CustomerService;
 
@@ -31,5 +28,16 @@ public class CustomerRestController {
         }
 
         return customer;
+    }
+
+    // add mapping for POST/customers - add new customer
+    @PostMapping("/customers")
+    public Customer addCustomer(@RequestBody Customer theCustomer) {
+        // Set ID to 0 so hibernate saveOrUpdate will do a save
+        theCustomer.setId(0);
+
+        customerService.saveCustomer(theCustomer);
+
+        return theCustomer;
     }
 }
