@@ -1,8 +1,8 @@
-package com.luv2code.springdemo.service;
+package tech.c3n7.springdemo.service;
 
 import java.util.List;
 
-import com.luv2code.springdemo.entity.Customer;
+import tech.c3n7.springdemo.entity.Customer;
 
 public interface CustomerService {
 

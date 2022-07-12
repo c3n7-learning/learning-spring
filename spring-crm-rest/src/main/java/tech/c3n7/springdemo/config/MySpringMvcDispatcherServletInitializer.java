@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.config;
+package tech.c3n7.springdemo.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

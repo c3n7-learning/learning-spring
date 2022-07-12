@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.dao;
+package tech.c3n7.springdemo.dao;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.luv2code.springdemo.entity.Customer;
+import tech.c3n7.springdemo.entity.Customer;
 
 @Repository
 public class CustomerDAOImpl implements CustomerDAO {

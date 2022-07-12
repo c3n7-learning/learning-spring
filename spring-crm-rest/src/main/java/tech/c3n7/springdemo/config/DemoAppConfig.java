@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.config;
+package tech.c3n7.springdemo.config;
 
 import java.beans.PropertyVetoException;
 import java.util.Properties;
@@ -27,7 +27,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
-@ComponentScan("com.luv2code.springdemo")
+@ComponentScan("tech.c3n7.springdemo.")
 @PropertySource({ "classpath:persistence-mysql.properties" })
 public class DemoAppConfig implements WebMvcConfigurer {
 
@@ -46,7 +46,7 @@ public class DemoAppConfig implements WebMvcConfigurer {
 
 		// set the jdbc driver
 		try {
-			myDataSource.setDriverClass("com.mysql.jdbc.Driver");		
+			myDataSource.setDriverClass("com.mariadb.jdbc.Driver");
 		}
 		catch (PropertyVetoException exc) {
 			throw new RuntimeException(exc);
