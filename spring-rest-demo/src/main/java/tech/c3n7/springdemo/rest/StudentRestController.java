@@ -38,26 +38,4 @@ public class StudentRestController {
 
         return students.get(studentId);
     }
-
-    // Add an exception handler using @ExceptionHandler
-    @ExceptionHandler
-    public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundException e) {
-        // Create a StudentErrorResponse
-        StudentErrorResponse error = new StudentErrorResponse();
-        error.setStatus(HttpStatus.NOT_FOUND.value());
-        error.setMessage(e.getMessage());
-        error.setTimeStamp(System.currentTimeMillis());
-
-        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
-    }
-
-    @ExceptionHandler
-    public ResponseEntity<StudentErrorResponse> handleException(Exception e) {
-        StudentErrorResponse error = new StudentErrorResponse();
-        error.setStatus(HttpStatus.BAD_REQUEST.value());
-        error.setMessage(e.getMessage());
-        error.setTimeStamp(System.currentTimeMillis());
-
-        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
-    }
 }
