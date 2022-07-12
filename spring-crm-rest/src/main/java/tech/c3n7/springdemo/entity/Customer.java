@@ -1,6 +1,7 @@
 package tech.c3n7.springdemo.entity;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="customer")
