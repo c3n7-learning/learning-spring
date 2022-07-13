@@ -11,7 +11,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
-public class EmployeeDAOHibernateImpl implements EmployeeDAO{
+public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
     // define field or entity manager
     private EntityManager entityManager;
@@ -23,7 +23,6 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO{
     }
 
     @Override
-    @Transactional
     public List<Employee> findAll() {
         // get the current hibernate session
         Session currentSession = entityManager.unwrap(Session.class);
@@ -37,5 +36,39 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO{
 
         // return the results
         return employees;
+    }
+
+    @Override
+    public Employee findById(int theId) {
+        // get the current hibernate session
+        Session currentSession = entityManager.unwrap(Session.class);
+
+        // get the employee
+        Employee employee =
+                currentSession.get(Employee.class, theId);
+
+        // return the result
+        return employee;
+    }
+
+    @Override
+    public void save(Employee employee) {
+        // get the current hibernate session
+        Session currentSession = entityManager.unwrap(Session.class);
+
+        // save the employee
+        currentSession.saveOrUpdate(employee);
+    }
+
+    @Override
+    public void deleteById(int theId) {
+        // get the current hibernate session
+        Session currentSession = entityManager.unwrap(Session.class);
+
+        Query theQuery = currentSession.createQuery("delete from Employee where id=:employeeId");
+
+        theQuery.setParameter("employeeId", theId);
+
+        theQuery.executeUpdate();
     }
 }
